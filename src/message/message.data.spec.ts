@@ -120,7 +120,7 @@ describe('MessageData', () => {
       expect(message.deleted).toEqual(false);
 
       // And that is it now deleted
-      const deletedMessage = await messageData.delete(new ObjectID(message.id));
+      const deletedMessage = await messageData.delete(message.id);
       expect(deletedMessage.deleted).toEqual(true);
     });
   });
